@@ -1,0 +1,126 @@
+.repair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  margin-left: auto;
+
+  @media (min-width: $desctop-breakpoint) {
+    margin-right: 0;
+    max-width: 1120px;
+  }
+
+  &__slider {
+    width: 100%;
+    min-height: 230px;
+  }
+
+  &__title {
+    @include title-style;
+  }
+
+  &__container {
+    @media (min-width: $laptop-breakpoint) {
+      flex-wrap: wrap;
+      align-items: center;
+      max-height: 100%;
+    }
+  }
+
+  &__slide {
+    margin-right: 12px;
+
+    @media (max-width: $laptop-breakpoint) {
+      width: 240px;
+      margin-left: 10px;
+      min-height: 200px;
+    }
+
+    @media (min-width: $laptop-breakpoint) {
+      width: 224px;
+      margin-left: 10px;
+    }
+
+    @media (min-width: $laptop-md) {
+      width: 240px;
+      margin-right: 16px;
+    }
+  }
+
+  &__card {
+    margin-top: 10px;
+    min-width: 224px;
+    margin-bottom: 10px;
+    background-color: $color-white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+
+    @media (max-width: $laptop-md) {
+      width: 224px;
+      height: 160px;
+    }
+
+    @media (min-width: $desctop-breakpoint) {
+      width: 240px;
+      height: 160px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__pc {
+    font-size: $font-size-base;
+    line-height: 24px;
+    color: $color-text-dark;
+    font-weight: 500;
+  }
+
+  &__link {
+    display: inline-block;
+    background-image: url(../img/go.svg);
+    width: 40px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 50px;
+  }
+}
+
+.show-button,
+.hide-button {
+  @include toggle-button-styles;
+
+  @media (max-width: $laptop-breakpoint) {
+    display: none;
+  }
+}
+
+.hide-button {
+  &::before {
+    transform: rotate(180deg) translateX(30px) translateY(20%);
+  }
+}
+
+.hidden {
+  display: $hidden-display;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+  margin-top: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: $color-paganition;
+  opacity: 1;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $color-paganition-active;
+  }
+}

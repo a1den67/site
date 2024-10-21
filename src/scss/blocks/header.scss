@@ -1,0 +1,99 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 19px;
+
+  @media (min-width: $desctop-breakpoint) {
+    display: none;
+  }
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $desctop-breakpoint) {
+      padding: 0 16px;
+    }
+  }
+
+  &__left-side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__burger {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    padding-left: 10px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  &__logo {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 110px;
+      bottom: 0;
+      width: 2px;
+      height: 40px;
+      background-color: $color-border;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+  }
+
+  &__call,
+  &__chat,
+  &__profile {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  &__profile {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 60px;
+      bottom: 0;
+      width: 2px;
+      height: 40px;
+      background-color: $color-border;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  &__repair,
+  &__checkstatus {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-right: 5px;
+    }
+  }
+}

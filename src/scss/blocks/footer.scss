@@ -1,0 +1,33 @@
+.footer {
+  &__about {
+    margin-top: 40px;
+    max-width: 1120px;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 20px;
+
+    @media (min-width: $desctop-breakpoint) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+      align-items: start;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    max-width: 330px;
+    opacity: 72.18%;
+    flex: 1;
+
+    @media (max-width: $laptop-breakpoint) {
+      margin-bottom: 20px;
+      max-width: 230px;
+    }
+  }
+}

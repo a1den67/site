@@ -1,0 +1,48 @@
+@mixin toggle-button-styles {
+  font-weight: 500;
+  font-size: $font-size-base;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing-base;
+  margin-left: 40px;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+
+  &::before {
+    content: url(../img/expand.png);
+    position: absolute;
+    left: 10px;
+    transform: translateX(-30px);
+  }
+}
+
+@mixin back-button {
+  background-image: url(../img/close.svg);
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+@mixin title-style {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #7e7e82;
+  margin: 15px 0 20px 0;
+  background: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border: 1px solid #d9fff5;
+}
+@mixin brand-style($image, $width, $height) {
+  background-image: url($image);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-position: center;
+}

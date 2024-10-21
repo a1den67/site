@@ -1,0 +1,147 @@
+.brands {
+  margin-left: auto;
+  max-width: 1200px;
+
+  @media (max-width: $desctop-breakpoint) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $desctop-breakpoint) {
+    max-width: 1120px;
+  }
+
+  &__slider {
+    margin-left: 10px;
+  }
+
+  &__container {
+    @media (max-width: $laptop-breakpoint) {
+      display: flex;
+      height: 130px;
+    }
+
+    @media (min-width: $laptop-breakpoint) {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    margin-right: 12px;
+
+    @media (max-width: $laptop-breakpoint) {
+      width: 240px;
+      margin-left: 10px;
+    }
+
+    @media (min-width: $laptop-breakpoint) {
+      width: 224px;
+      margin-left: 12px;
+    }
+
+    @media (min-width: $laptop-md) {
+      width: 240px;
+      margin-right: 16px;
+    }
+  }
+
+  &__title {
+    @include title-style;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    width: 224px;
+
+    @media (min-width: $laptop-breakpoint) {
+      width: 224px;
+    }
+
+    @media (min-width: $laptop-md) {
+      width: 240px;
+    }
+
+    img {
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-left: 16px;
+    }
+  }
+
+  &__lenovo {
+    @include brand-style('../img/Bitmap.svg', 108px, 32px);
+  }
+
+  &__samsung {
+    @include brand-style('../img/samsung.svg', 116px, 38px);
+  }
+
+  &__apple {
+    @include brand-style('../img/apple.svg', 44px, 44px);
+  }
+
+  &__sonic {
+    @include brand-style('../img/viewSonic.svg', 128px, 21px);
+  }
+
+  &__bosch {
+    @include brand-style('../img/bosch.svg', 128px, 29px);
+  }
+
+  &__hp {
+    @include brand-style('../img/hp.svg', 52px, 52px);
+  }
+
+  &__acer {
+    @include brand-style('../img/acer.svg', 94px, 24px);
+  }
+
+  &__sony {
+    @include brand-style('../img/Sony.svg', 128px, 25px);
+  }
+
+  &__link {
+    background-image: url(../img/go.svg);
+    width: 40px;
+    height: 40px;
+    padding-right: 16px;
+  }
+
+  &__button {
+    @include toggle-button-styles;
+
+    @media (max-width: $laptop-breakpoint) {
+      display: none;
+    }
+  }
+
+  .hide-button {
+    &::before {
+      transform: rotate(180deg) translateX(30px) translateY(20%);
+    }
+  }
+
+  .hidden {
+    display: $hidden-display;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $color-paganition;
+  opacity: 1;
+
+  &-active {
+    background-color: $color-paganition-active;
+  }
+}
