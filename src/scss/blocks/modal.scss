@@ -215,10 +215,10 @@
 .overlay {
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease; // Плавное изменение прозрачности
+  transition: opacity 0.3s ease;
 }
 
 .visible {
-  display: block; // Делаем overlay видимым
-  opacity: 1; // Добавляем плавное появление
+  display: block; 
+  opacity: 1; 
 }
