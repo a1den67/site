@@ -1,18 +1,12 @@
-// styles.scss
+@import './general/variables';
+@import './general/mixin';
+@import './general/fonts';
+@import './general/normalize';
 
-// 1. Импортируем переменные и миксины
-@import './general/variables'; // Переменные
-@import './general/mixin'; // Миксины
-
-// 2. Импортируем нормализацию и базовые стили
-@import './general/normalize'; // Нормализация стилей
-@import './general/fonts'; // Шрифты
-
-// 3. Импортируем стили для компонентов
 @import './blocks/page.scss';
 @import './blocks/aside.scss';
-@import './blocks/header'; // Заголовок
-@import './blocks/services'; // Услуги
+@import './blocks/header';
+@import './blocks/services';
 @import './blocks/brands';
 @import './blocks/repair';
 @import './blocks/prices.scss';

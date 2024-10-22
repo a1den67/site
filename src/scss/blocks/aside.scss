@@ -33,18 +33,7 @@
     }
 
     &__search {
-      width: 40px;
-      height: 40px;
-      background: transparent url(../img/checkstatus.svg) no-repeat center;
-      border: none;
-      cursor: pointer;
-      transition:
-        opacity 0.3s ease,
-        transform 0.4s ease;
-
-      &:hover {
-        opacity: 0.7;
-      }
+      @include button-img('../img/checkstatus.svg', 40px, 40px);
     }
 
     &__logo {
@@ -111,35 +100,16 @@
       margin-top: 268px;
     }
 
-    &__call,
-    &__chat,
-    &__profile {
-      width: 40px;
-      height: 40px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
-
-      &:hover {
-        opacity: 0.7;
-        transform: translateY(-5px);
-      }
-    }
-
     &__call {
-      background-image: url(../img/call.svg);
+      @include button-img('../img/call.svg', 40px, 40px);
     }
 
     &__chat {
-      background-image: url(../img/chat.svg);
-      margin: 0 16px;
+      @include button-img('../img/chat.svg', 40px, 40px);
     }
 
     &__profile {
-      background-image: url(../img/profile.svg);
+      @include button-img('../img/profile.svg', 40px, 40px);
     }
 
     &__mail,

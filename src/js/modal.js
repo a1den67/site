@@ -11,21 +11,21 @@ function initNavigation() {
   function openAside() {
     aside.classList.add('active')
     document.body.appendChild(overlay)
-    overlay.style.display = 'block'
+    overlay.classList.add('visible')
   }
 
   function openModal(modal) {
     closeAll()
     modal.classList.add('active')
     document.body.appendChild(overlay)
-    overlay.style.display = 'block'
+    overlay.classList.add('visible')
   }
 
   function closeAll() {
     aside.classList.remove('active')
     feedbackModal.classList.remove('active')
     callbackModal.classList.remove('active')
-    overlay.style.display = 'none'
+    overlay.classList.remove('visible')
   }
 
   burgerButton.addEventListener('click', openAside)

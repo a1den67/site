@@ -212,6 +212,13 @@
   }
 }
 
-// .modal--hide {
-//   display: none; // Скрыть модалку по умолчанию
-// }
+.overlay {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease; // Плавное изменение прозрачности
+}
+
+.visible {
+  display: block; // Делаем overlay видимым
+  opacity: 1; // Добавляем плавное появление
+}
