@@ -1,7 +1,10 @@
+// styles.scss
+
 @import './general/variables';
 @import './general/mixin';
-@import './general/fonts';
+
 @import './general/normalize';
+@import './general/fonts';
 
 @import './blocks/page.scss';
 @import './blocks/aside.scss';
